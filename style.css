@@ -1,0 +1,322 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1000;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffffff 50%, rgba(255,255,255,0) 100%), 
+                url('hero-image.jpg') center/cover no-repeat;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+.hero h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menyebarkan elemen */
+    padding: 50px 10%;
+    background: white;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pusatkan teks di dalam div */
+    min-width: 150px;
+    font-size: 70px;
+
+    background-image: url('sunflower-text.jpg'); /* Ganti dengan gambar yang kamu inginkan */
+    background-size: cover;
+    background-position: center;
+
+    -webkit-background-clip: text; /* Untuk browser berbasis WebKit */
+    -webkit-text-fill-color: transparent; /* Membuat teks transparan agar gambar terlihat */
+}
+
+.about p {
+    flex: 1; /* Biarkan teks memenuhi ruang yang tersedia */
+    font-size: 18px;
+    text-align: left, top;
+    max-width: 500px; /* Batasi lebar teks */
+}
+
+.about-par {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pusatkan paragraf */
+    gap: 15px;
+    font-size: 18px;
+    max-width: 500px; /* Batasi lebar agar rapi */
+}
+
+/* Video Placeholder */
+.video-placeholder {
+    width: 400px;
+    height: 220px;
+    background: linear-gradient(to bottom, #ddd, #999);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: auto; /* Pastikan video tetap di sisi kanan */
+}
+
+
+/* Features */
+.features {
+    background: url('background-image.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set to 3 columns for desktop */
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.feature-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Heading dalam Box */
+.feature-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.feature-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+
+
+/* Background untuk Section Testimonials */
+.testimonials {
+    background: url('testimonial-image.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Grid Layout untuk Testimonial */
+.grid-testimonials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom di desktop */
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Styling untuk Testimonial Box */
+.testimonial {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover Effect */
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Placeholder untuk Gambar */
+.image-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Nama Pelanggan */
+.testimonial h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+/* Nama Perusahaan dan Jabatan */
+.testimonial .company {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+/* Paragraf Ulasan */
+.testimonial p {
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* FAQ Section */
+/* FAQ Section */
+.faq {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative; /* Untuk posisi gambar */
+}
+
+/* FAQ Container untuk Layout */
+.faq-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    position: relative; /* Agar gambar tetap dalam layout */
+}
+
+/* Styling untuk Konten FAQ */
+.faq-content {
+    flex: 2; /* Lebih besar dari gambar */
+    text-align: left;
+    padding: 20px;
+}
+
+/* Styling untuk Item FAQ */
+.faq-item {
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+/* Styling untuk Background Gambar */
+.faq::before,
+.faq::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; /* Ukuran gambar */
+    height: 500px; /* Sesuaikan tinggi gambar */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Gambar Kiri */
+.faq::before {
+    left: 20px;
+    background-image: url('sunflower-image.jpg');
+}
+
+/* Gambar Kanan */
+.faq::after {
+    right: 20px;
+    background-image: url('sunflower-image.jpg');
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
