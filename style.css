@@ -67,13 +67,13 @@ body {
     background-color: #0056b3;
 }
 
-
 .about {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 50px 10%;
     background: white;
+    flex-wrap: wrap;
 }
 
 .about-text {
@@ -91,10 +91,14 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.about-text span{
+    display: block;
+}
+
 .about p {
     flex: 1; 
     font-size: 18px;
-    text-align: left, top;
+    text-align: center;
     max-width: 500px;
 }
 
@@ -105,6 +109,7 @@ body {
     gap: 15px;
     font-size: 18px;
     max-width: 500px;
+    line-height: 1.6;
 }
 
 
@@ -118,7 +123,7 @@ body {
     color: black;
     font-size: 20px;
     border-radius: 10px;
-    margin-left: auto;
+
 }
 
 
@@ -159,11 +164,88 @@ body {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .about-par {
+        align-items: center;
+    }
+
+    .about-text span {
+        display:inline;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 50px;
+}}
+
+@media (max-width: 1440px){
+    .hero{
+        padding: 40px
+    }
+    
+
+    .hero h2 {
+        font-size: 100px
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-testimonials {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1rem;
+    }
+
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .faq-content {
+        width: 100%;
+    }
+
+    .faq-item {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+    .faq-item strong {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .faq, .faq-container, .faq-content {
+        overflow: hidden;
+    }
+
+    .faq::before, .faq::after {
+        display: none;
     }
 }
 
@@ -180,6 +262,7 @@ body {
     gap: 20px;
     max-width: 1200px;
     margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .testimonial {
@@ -232,6 +315,7 @@ body {
     padding: 50px 20px;
     text-align: center;
     position: relative;
+    
 }
 
 .faq-container {
@@ -293,5 +377,5 @@ footer {
 }
 
 .footer-info p {
-    margin: 5px 0;
+    margin: 5px 0;
 }
